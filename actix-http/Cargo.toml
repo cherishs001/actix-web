@@ -91,7 +91,7 @@ rand = { version = "0.8", optional = true }
 sha1 = { version = "0.10", optional = true }
 
 # openssl/rustls
-actix-tls = { version = "3", default-features = false, optional = true }
+actix-tls = { git = "https://github.com/cherishs001/actix-net.git#2fe3fe3c", default-features = false, optional = true }
 
 # compress-*
 brotli = { version = "3.3.3", optional = true }
@@ -101,7 +101,7 @@ zstd = { version = "0.12", optional = true }
 [dev-dependencies]
 actix-http-test = { version = "3", features = ["openssl"] }
 actix-server = "2"
-actix-tls = { version = "3", features = ["openssl"] }
+actix-tls = { git = "https://github.com/cherishs001/actix-net.git#2fe3fe3c", features = ["openssl"] }
 actix-web = "4"
 
 async-stream = "0.3"
@@ -118,7 +118,7 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 static_assertions = "1"
 tls-openssl = { package = "openssl", version = "0.10.55" }
-tls-rustls = { package = "rustls", version = "0.20" }
+tls-rustls = { package = "rustls", git = "https://github.com/cherishs001/rustls.git#d49213c3", branch = "dev/arm" }
 tokio = { version = "1.24.2", features = ["net", "rt", "macros"] }
 
 [[example]]
